@@ -1,11 +1,36 @@
 body {
-  background-color: azure;
+  background-color: #c3e0e5;
   font-family: "Ubuntu Mono", monospace;
 }
 .app-container {
-  border: 1px solid black;
+  border: 1px solid #5885af;
   max-width: 800px;
-  margin: 30px auto;
+  margin: 50px auto;
   padding: 30px;
-  border-radius: 15px;
+  border-radius: 16px;
+  background-color: #e1edef;
+  box-shadow: 0 30px 50px rgba(39, 68, 114, 0.2);
+}
+form {
+  display: flex;
+  justify-content: space-between;
+}
+.search-field {
+  width: 78%;
+  border: 1px solid #5885af;
+  border-radius: 10px;
+  padding: 10px;
+}
+.search-button {
+  width: 20%;
+  background: #5885af;
+  border: 1px solid #5885af;
+  border-radius: 10px;
+  transition: all 200ms ease-in-out;
+  color: #c3e0e5;
+}
+.search-button:hover {
+  cursor: pointer;
+  background-color: #c3e0e5;
+  color: #5885af;
 }
