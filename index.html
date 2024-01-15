@@ -3,56 +3,38 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="src/style.css" />
     <title>Weather Forecast</title>
   </head>
   <body>
-  <div class="app-container">
-    <h1>Monday, 13 January</h1>
-    <div> <span id="current-time">13:15</span> PM</div>
-    <div id="conditions-icon">🌥️</div>
-    <div><span id="current-temp">41</span>°<span class="temp-unit">C</span></div>
-    <div>
-      <span
-        ><svg
-          xmlns="http://www.w3.org/2000/svg"
-          height="24"
-          viewBox="0 -960 960 960"
-          width="24"
-        >
-          <path
-            d="M480-480q33 0 56.5-23.5T560-560q0-33-23.5-56.5T480-640q-33 0-56.5 23.5T400-560q0 33 23.5 56.5T480-480Zm0 294q122-112 181-203.5T720-552q0-109-69.5-178.5T480-800q-101 0-170.5 69.5T240-552q0 71 59 162.5T480-186Zm0 106Q319-217 239.5-334.5T160-552q0-150 96.5-239T480-880q127 0 223.5 89T800-552q0 100-79.5 217.5T480-80Zm0-480Z"
-          /></svg></span
-      >
-    <span id="current-city">Sydney</span>, <span id="current-state">NSW</span>
+    <div class="app-container">
+      <header>
+        <form>
+          <input type="search" placeholder="Enter a city..." required />
+          <input type="submit" value="Search" />
+        </form>
+      </header>
+      <h1>Monday, 13 January</h1>
+      <div><span id="current-time">13:15</span> PM</div>
+      <div id="conditions-icon">🌥️</div>
+      <div><span id="current-temp">41</span>°</div>
+      <div>
+        <span id="current-low">17</span>° / <span id="current-high">41</span>°
+      </div>
+      <div>celsius</div>
+      <div>
+        <span id="current-city">Sydney</span>,
+        <span id="current-state">NSW</span>
+      </div>
+      <div>Humidity: 71%</div>
+      <div>Wind Speed: 7.6km/hr</div>
+      <footer>
+        This page was created by Chantel Kitchin and is hosted on Netlfiy
+      </footer>
     </div>
-    <div>
-      <span
-        ><svg
-          xmlns="http://www.w3.org/2000/svg"
-          height="24"
-          viewBox="0 -960 960 960"
-          width="24"
-        >
-          <path
-            d="M480-100q-133 0-226.5-92T160-416q0-63 24.5-120.5T254-638l226-222 226 222q45 44 69.5 101.5T800-416q0 132-93.5 224T480-100ZM240-416h480q0-47-18-89.5T650-580L480-748 310-580q-34 32-52 74.5T240-416Z"
-          /></svg></span
-      >Humidity: 71%
-    </div>
-    <div>
-      <span
-        ><svg
-          xmlns="http://www.w3.org/2000/svg"
-          height="24"
-          viewBox="0 -960 960 960"
-          width="24"
-        >
-          <path
-            d="M460-160q-50 0-85-35t-35-85h80q0 17 11.5 28.5T460-240q17 0 28.5-11.5T500-280q0-17-11.5-28.5T460-320H80v-80h380q50 0 85 35t35 85q0 50-35 85t-85 35ZM80-560v-80h540q26 0 43-17t17-43q0-26-17-43t-43-17q-26 0-43 17t-17 43h-80q0-59 40.5-99.5T620-840q59 0 99.5 40.5T760-700q0 59-40.5 99.5T620-560H80Zm660 320v-80q26 0 43-17t17-43q0-26-17-43t-43-17H80v-80h660q59 0 99.5 40.5T880-380q0 59-40.5 99.5T740-240Z"
-          /></svg></span
-      >Wind Speed: 7.6km/hr
-    </div>
-  </div>
     <script src="src/script.js"></script>
   </body>
 </html>

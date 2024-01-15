@@ -1,6 +1,11 @@
 body {
-    
+  background-color: azure;
+  font-family: "Ubuntu Mono", monospace;
 }
 .app-container {
   border: 1px solid black;
+  max-width: 800px;
+  margin: 30px auto;
+  padding: 30px;
+  border-radius: 15px;
 }
