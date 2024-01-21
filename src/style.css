@@ -42,8 +42,12 @@ form {
   justify-content: space-between;
   padding-bottom: 20px;
 }
+.condition-type {
+  color: rgba(39, 35, 67, 0.6);
+}
 .conditions-result {
   color: #91d3d3;
+  font-weight: bold;
 }
 .temperature {
   font-size: 80px;
@@ -58,6 +62,7 @@ form {
   font-weight: lighter;
   position: relative;
   right: -10px;
+  color: rgba(39, 35, 67, 0.6);
 }
 h2 {
   font-size: 14px;
