@@ -57,13 +57,16 @@ form {
   margin-top: 27px;
   margin-bottom: 27px;
 }
-.temp-range {
-  font-size: 22px;
-  font-weight: lighter;
+#conditions-icon {
   position: relative;
-  right: -10px;
-  color: rgba(39, 35, 67, 0.6);
+  bottom: -20px;
 }
+.unit {
+  font-size: 20px;
+  position: relative;
+  top: -35px;
+}
+
 h2 {
   font-size: 14px;
   font-weight: 500;

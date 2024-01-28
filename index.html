@@ -38,7 +38,7 @@
           <div>
             <span class="condition-type">Humidity: </span>
             <span class="conditions-result"
-              ><span id="humidity-result">71</span>%</span
+              ><span id="humidity-result"></span>%</span
             >
           </div>
           <div>
@@ -48,7 +48,14 @@
             >
           </div>
         </div>
-        <div class="temperature"><span id="current-temp"></span>°</div>
+        <div class="temperature">
+          <img
+            id="conditions-icon"
+            src="http://shecodes-assets.s3.amazonaws.com/api/weather/icons/clear-sky-day.png"
+            alt="clear-sky-day"
+          />
+          <span id="current-temp">25</span>°<span class="unit">C</span>
+        </div>
       </div>
 
       <footer>
