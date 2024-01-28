@@ -5,13 +5,15 @@ function refreshData(response) {
   let windElement = document.querySelector("#wind-result");
   let temperature = response.data.temperature.current;
   let iconElement = document.querySelector("#conditions-icon");
+  let conditionsElement = document.querySelector("#condition-description");
   let date = new Date(response.data.time * 1000);
   let dateElement = document.querySelector("#date");
-
+ 
   cityElement.innerHTML = response.data.city;
   tempElement.innerHTML = Math.round(temperature);
   humidityElement.innerHTML = response.data.temperature.humidity;
   windElement.innerHTML = response.data.wind.speed;
+  conditionsElement.innerHTML = response.data.condition.description;
   iconElement.innerHTML = `
     <img
       src="${response.data.condition.icon_url}"
