@@ -8,11 +8,11 @@ function refreshData(response) {
   let conditionsElement = document.querySelector("#condition-description");
   let date = new Date(response.data.time * 1000);
   let dateElement = document.querySelector("#date");
- 
+
   cityElement.innerHTML = response.data.city;
   tempElement.innerHTML = Math.round(temperature);
-  humidityElement.innerHTML = response.data.temperature.humidity;
-  windElement.innerHTML = response.data.wind.speed;
+  humidityElement.innerHTML = `${response.data.temperature.humidity}%`;
+  windElement.innerHTML = `${response.data.wind.speed}km/hr`;
   conditionsElement.innerHTML = response.data.condition.description;
   iconElement.innerHTML = `
     <img
@@ -51,8 +51,18 @@ function formatDate(date) {
   ];
   let month = months[date.getMonth()];
   let hour = date.getHours();
+  let minutes = date.getMinutes();
+  let amPm = "AM";
 
-  return `${day}, ${date.getDate()} ${month} </br> ${hour}:${date.getMinutes()}`;
+  if (minutes < 10) {
+    minutes = `0${minutes}`;
+  }
+
+  if (hour > 11) {
+    amPm = "PM";
+  }
+
+  return `${day}, ${date.getDate()} ${month} </br> ${hour}:${minutes} ${amPm}`;
 }
 
 function apiCitySearch(city) {
