@@ -5,6 +5,8 @@ function refreshData(response) {
   let windElement = document.querySelector("#wind-result");
   let temperature = response.data.temperature.current;
   let iconElement = document.querySelector("#conditions-icon");
+  let date = new Date(response.data.time * 1000);
+  let dateElement = document.querySelector("#date");
 
   cityElement.innerHTML = response.data.city;
   tempElement.innerHTML = Math.round(temperature);
@@ -16,6 +18,39 @@ function refreshData(response) {
       alt="${response.data.condition.icon}"
     />
   `;
+  dateElement.innerHTML = formatDate(date);
+}
+
+function formatDate(date) {
+  let currentDateElement = document.querySelector("#dateTime");
+  let days = [
+    "Sunday",
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday",
+  ];
+  let day = days[date.getDay()];
+  let months = [
+    "January",
+    "February",
+    "March",
+    "April",
+    "May",
+    "June",
+    "July",
+    "August",
+    "September",
+    "October",
+    "November",
+    "December",
+  ];
+  let month = months[date.getMonth()];
+  let hour = date.getHours();
+
+  return `${day}, ${date.getDate()} ${month} </br> ${hour}:${date.getMinutes()}`;
 }
 
 function apiCitySearch(city) {
