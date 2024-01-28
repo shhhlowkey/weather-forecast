@@ -4,11 +4,18 @@ function refreshData(response) {
   let humidityElement = document.querySelector("#humidity-result");
   let windElement = document.querySelector("#wind-result");
   let temperature = response.data.temperature.current;
+  let iconElement = document.querySelector("#conditions-icon");
 
   cityElement.innerHTML = response.data.city;
   tempElement.innerHTML = Math.round(temperature);
   humidityElement.innerHTML = response.data.temperature.humidity;
   windElement.innerHTML = response.data.wind.speed;
+  iconElement.innerHTML = `
+    <img
+      src="${response.data.condition.icon_url}"
+      alt="${response.data.condition.icon}"
+    />
+  `;
 }
 
 function apiCitySearch(city) {

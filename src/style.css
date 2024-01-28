@@ -58,6 +58,7 @@ form {
   margin-bottom: 27px;
 }
 #conditions-icon {
+  display: inline;
   position: relative;
   bottom: -20px;
 }
@@ -72,6 +73,7 @@ h2 {
   font-weight: 500;
   margin-top: 20px;
   margin-bottom: 0;
+  color: rgba(39, 35, 67, 0.6);
 }
 h1 {
   font-size: 40px;
