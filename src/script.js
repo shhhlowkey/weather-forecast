@@ -1,10 +1,14 @@
 function refreshData(response) {
   let tempElement = document.querySelector("#current-temp");
   let cityElement = document.querySelector("#current-city");
+  let humidityElement = document.querySelector("#humidity-result");
+  let windElement = document.querySelector("#wind-result");
   let temperature = response.data.temperature.current;
 
   cityElement.innerHTML = response.data.city;
   tempElement.innerHTML = Math.round(temperature);
+  humidityElement.innerHTML = response.data.temperature.humidity;
+  windElement.innerHTML = response.data.wind.speed;
 }
 
 function apiCitySearch(city) {
