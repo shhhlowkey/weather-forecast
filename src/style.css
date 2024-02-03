@@ -82,6 +82,36 @@ form {
 h1 {
   font-size: 40px;
 }
+.weather-forecast-container {
+  padding: 20px 0;
+  display: flex;
+  justify-content: space-between;
+}
+.forecast-col-1,
+.forecast-col-2,
+.forecast-col-3,
+.forecast-col-4,
+.forecast-col-5 {
+  text-align: center;
+  padding: 0 20px 0 20px;
+}
+.forecast-day {
+  font-size: 14px;
+  opacity: 0.6;
+}
+.forecast-conditions-icon {
+  width: 50px;
+}
+.forecast-temperature {
+  font-size: 14px;
+}
+.forecast-temperature-min {
+  opacity: 0.8;
+  color: #91d3d3;
+}
+.forecast-temperature-max {
+  opacity: 0.6;
+}
 footer {
   border-top: 1px solid #e3f6f5;
   padding: 20px 0 0 0;
