@@ -87,13 +87,10 @@ h1 {
   display: flex;
   justify-content: space-between;
 }
-.forecast-col-1,
-.forecast-col-2,
-.forecast-col-3,
-.forecast-col-4,
-.forecast-col-5 {
+.forecast-col {
   text-align: center;
   padding: 0 20px 0 20px;
+  column-width: 60px;
 }
 .forecast-day {
   font-size: 14px;
@@ -104,13 +101,16 @@ h1 {
 }
 .forecast-temperature {
   font-size: 14px;
+  display: flex;
+  justify-content: space-between;
 }
 .forecast-temperature-min {
   opacity: 0.8;
   color: #91d3d3;
 }
 .forecast-temperature-max {
-  opacity: 0.6;
+  color: #91d3d3;
+  font-weight: 800;
 }
 footer {
   border-top: 1px solid #e3f6f5;

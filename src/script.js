@@ -83,3 +83,32 @@ let searchForm = document.querySelector("#search-form");
 searchForm.addEventListener("submit", handleCitySearch);
 
 apiCitySearch("Brisbane");
+
+function displayForecast() {
+  let days = ["Mon", "Tue", "Wed", "Thu", "Fri"];
+  let forecastHtml = "";
+
+  days.forEach(function (day) {
+    forecastHtml =
+      forecastHtml +
+      `
+<div class="forecast-col">
+          <div class="forecast-day">${day}</div>
+          <div class="forecast-conditions">
+            <img
+              src="http://shecodes-assets.s3.amazonaws.com/api/weather/icons/clear-sky-night.png"
+              alt="forecast-conditions"
+              class="forecast-conditions-icon"
+            />
+          </div>
+          <div class="forecast-temperature">
+            <span class="forecast-temperature-max">35° </span>
+            <span class="forecast-temperature-min"> 23°</span>
+          </div>
+        </div>
+`;
+  });
+  let forecastElement = document.querySelector("#forecast");
+  forecastElement.innerHTML = forecastHtml;
+}
+displayForecast();
