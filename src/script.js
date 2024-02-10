@@ -21,6 +21,8 @@ function refreshData(response) {
     />
   `;
   dateElement.innerHTML = formatDate(date);
+
+  getForecast(response.data.city);
 }
 
 function formatDate(date) {
@@ -79,12 +81,15 @@ function handleCitySearch(event) {
   apiCitySearch(searchInput.value);
 }
 
-let searchForm = document.querySelector("#search-form");
-searchForm.addEventListener("submit", handleCitySearch);
+function getForecast(city) {
+  let apiKey = "6a97550f4fc033e330d0ot4a7bb681ab";
+  let apiUrl = `https://api.shecodes.io/weather/v1/forecast?query=${city}&key=${apiKey}&units=metric`;
+  axios.get(apiUrl).then(displayForecast);
+}
 
-apiCitySearch("Brisbane");
+function displayForecast(response) {
+  console.log(response.data);
 
-function displayForecast() {
   let days = ["Mon", "Tue", "Wed", "Thu", "Fri"];
   let forecastHtml = "";
 
@@ -111,4 +116,8 @@ function displayForecast() {
   let forecastElement = document.querySelector("#forecast");
   forecastElement.innerHTML = forecastHtml;
 }
-displayForecast();
+
+let searchForm = document.querySelector("#search-form");
+searchForm.addEventListener("submit", handleCitySearch);
+
+apiCitySearch("Brisbane");
